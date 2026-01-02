@@ -5,21 +5,14 @@ interface Props {
 
 const { href, ...rest } = Astro.props;
 
-// Extract hostname from URL for DuckDuckGo favicon CDN
-function getHostname(url: string): string | null {
-  try {
-    const urlObj = new URL(url);
-    return urlObj.hostname;
-  } catch {
-    // Not a valid absolute URL (could be relative link or anchor)
-    return null;
-  }
-}
-
-const hostname = getHostname(href);
+const hostname = new URL(href).hostname;
 const isExternalLink = hostname !== null;
 const faviconUrl = isExternalLink ? `https://icons.duckduckgo.com/ip3/${hostname}.ico` : null;
-const isGithub = hostname === 'github.com';
+
+const invertedFavicons = [
+  'github.com',
+];
+const isInvertedFavicon = invertedFavicons.includes(hostname);
 ---
 
 {isExternalLink ? (
@@ -27,7 +20,7 @@ const isGithub = hostname === 'github.com';
     <img
       src={faviconUrl}
       alt=""
-      class:list={["favicon-icon", { "favicon-github": isGithub }]}
+      class:list={["favicon-icon", { "favicon-inverted": isInvertedFavicon }]}
       width="16"
       height="16"
       loading="lazy"
@@ -55,12 +48,8 @@ const isGithub = hostname === 'github.com';
     flex-shrink: 0;
   }
 
-  :global(.dark) .favicon-github {
-    filter: invert(1);
-  }
-
   @media (prefers-color-scheme: dark) {
-    .favicon-github {
+    .favicon-inverted {
       filter: invert(1);
     }
   }
