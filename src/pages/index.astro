@@ -1,5 +1,6 @@
 ---
-
+import '../styles/global.css';
+import { Content } from '../content/notra.md';
 ---
 
 <html lang="en">
@@ -8,9 +9,13 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Notra</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-white dark:bg-zinc-900">
+		<main class="relative z-10 mx-auto mt-16 max-w-xl px-4 py-4 text-zinc-900 dark:text-zinc-100">
+			<article class="prose dark:prose-invert prose-zinc">
+				<Content />
+			</article>
+		</main>
 	</body>
 </html>
