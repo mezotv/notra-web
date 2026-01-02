@@ -19,6 +19,7 @@ function getHostname(url: string): string | null {
 const hostname = getHostname(href);
 const isExternalLink = hostname !== null;
 const faviconUrl = isExternalLink ? `https://icons.duckduckgo.com/ip3/${hostname}.ico` : null;
+const isGithub = hostname === 'github.com';
 ---
 
 {isExternalLink ? (
@@ -26,7 +27,7 @@ const faviconUrl = isExternalLink ? `https://icons.duckduckgo.com/ip3/${hostname
     <img
       src={faviconUrl}
       alt=""
-      class="favicon-icon"
+      class:list={["favicon-icon", { "favicon-github": isGithub }]}
       width="16"
       height="16"
       loading="lazy"
@@ -52,5 +53,15 @@ const faviconUrl = isExternalLink ? `https://icons.duckduckgo.com/ip3/${hostname
     height: 16px;
     vertical-align: middle;
     flex-shrink: 0;
+  }
+
+  :global(.dark) .favicon-github {
+    filter: invert(1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .favicon-github {
+      filter: invert(1);
+    }
   }
 </style>
