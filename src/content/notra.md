@@ -1,6 +1,6 @@
 # Notra
 
-**Notra** is a content engine that transforms the operational data your company generates into ready-to-share content using the content turbo concept.
+**Notra** is a content engine that transforms the operational data your company generates into ready-to-share content.
 
 ## What is Notra?
 
