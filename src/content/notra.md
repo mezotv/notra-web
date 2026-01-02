@@ -1,33 +1,35 @@
 # Notra
 
-**Notra** is a modern note-taking and knowledge management platform designed to help you capture, organize, and connect your ideas seamlessly.
+**Notra** is a Content Turbo engine that transforms the operational data your company generates into ready-to-share content.
 
 ## What is Notra?
 
-Notra transforms the way you think about notes. Instead of isolated documents scattered across folders, Notra creates a living network of your thoughts and ideas—making it easy to discover connections you never knew existed.
+Just like a car's turbo engine recycles exhaust gases into more power, Notra takes the data you're already generating—merged GitHub PRs, completed Linear issues, Slack conversations, commits, and team activity—and transforms it into compelling blog posts, changelogs, tweets, LinkedIn posts, and investor updates.
+
+You wake up with a feed of ready-to-post content. All in the background.
 
 ## Key Features
 
-### Effortless Capture
-Write notes in plain text or rich markdown. Notra stays out of your way so you can focus on what matters most: your ideas.
+### Automatic Data Collection
+Connect your existing tools—GitHub, Linear, Slack, and more. Notra seamlessly ingests the operational data your team generates every single day.
 
-### Smart Organization
-Tags, links, and automatic relationships help you organize without the overhead of rigid folder structures. Find anything instantly with powerful search.
+### Intelligent Content Generation
+Our content engine analyzes your raw data and generates multiple content formats: blog posts, changelogs, social media updates, and investor-ready summaries. All tailored to your voice.
 
-### Connected Thinking
-Bi-directional links and graph visualization reveal the hidden connections between your notes, helping you build a second brain that grows with you.
+### Multi-Format Publishing
+One data point becomes multiple pieces of content. A shipped feature generates a changelog entry, a tweet, a LinkedIn post, and talking points for stakeholders.
 
-### Privacy First
-Your notes are yours. Notra keeps your data secure and private, with local-first storage and optional end-to-end encryption.
+### Inspiration On Demand
+Wake up to a curated feed of content ideas and drafts ready for review. No more scrambling for update ideas—your work writes itself.
 
 ## Getting Started
 
-Getting started with Notra is simple:
+Notra is coming soon! Sign up to be notified when we launch:
 
-1. Create your first note
-2. Link it to related ideas
-3. Watch your knowledge graph grow
+1. Connect your development tools
+2. Let Notra analyze your team's work
+3. Start sharing your impact with the world
 
 ---
 
-*Notra — Where thoughts connect.*
+*Notra — Turn your work into content. Automatically.*
