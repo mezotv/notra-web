@@ -16,7 +16,7 @@ const isInvertedFavicon = invertedFavicons.includes(hostname);
 ---
 
 {isExternalLink ? (
-  <a href={href} {...rest} class="favicon-link">
+  <a href={href} {...rest}>
     <img
       src={faviconUrl}
       alt=""
@@ -34,18 +34,12 @@ const isInvertedFavicon = invertedFavicons.includes(hostname);
 )}
 
 <style>
-  .favicon-link {
-    position: relative;
-    padding-left: 20px;
-  }
-
   .favicon-icon {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    display: inline;
     width: 16px;
     height: 16px;
+    vertical-align: -3px;
+    margin-right: 4px;
   }
 
   @media (prefers-color-scheme: dark) {
