@@ -1,0 +1,56 @@
+---
+interface Props {
+  href: string;
+}
+
+const { href, ...rest } = Astro.props;
+
+// Extract hostname from URL for DuckDuckGo favicon CDN
+function getHostname(url: string): string | null {
+  try {
+    const urlObj = new URL(url);
+    return urlObj.hostname;
+  } catch {
+    // Not a valid absolute URL (could be relative link or anchor)
+    return null;
+  }
+}
+
+const hostname = getHostname(href);
+const isExternalLink = hostname !== null;
+const faviconUrl = isExternalLink ? `https://icons.duckduckgo.com/ip3/${hostname}.ico` : null;
+---
+
+{isExternalLink ? (
+  <a href={href} {...rest} class="favicon-link">
+    <img
+      src={faviconUrl}
+      alt=""
+      class="favicon-icon"
+      width="16"
+      height="16"
+      loading="lazy"
+    />
+    <slot />
+  </a>
+) : (
+  <a href={href} {...rest}>
+    <slot />
+  </a>
+)}
+
+<style>
+  .favicon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25em;
+  }
+
+  .favicon-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+</style>
