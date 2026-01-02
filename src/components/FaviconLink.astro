@@ -43,15 +43,25 @@ const faviconUrl = isExternalLink ? `https://icons.duckduckgo.com/ip3/${hostname
   .favicon-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.25em;
+    gap: 4px;
   }
 
   .favicon-icon {
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 16px;
+    height: 16px;
     vertical-align: middle;
     flex-shrink: 0;
+  }
+
+  :global(.dark) .favicon-icon,
+  :global(html.dark) .favicon-icon {
     filter: invert(1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .favicon-icon {
+      filter: invert(1);
+    }
   }
 </style>
