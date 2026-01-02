@@ -35,15 +35,17 @@ const isInvertedFavicon = invertedFavicons.includes(hostname);
 
 <style>
   .favicon-link {
-    display: inline;
+    position: relative;
+    padding-left: 20px;
   }
 
   .favicon-icon {
-    display: inline;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 16px;
     height: 16px;
-    vertical-align: text-bottom;
-    margin-right: 4px;
   }
 
   @media (prefers-color-scheme: dark) {
