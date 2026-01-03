@@ -6,12 +6,12 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://notra.io',
+  site: 'https://usenotra.com',
   integrations: [
     mdx(),
     sitemap({
-      changefreq: 'weekly',
-      priority: 0.7,
+      changefreq: 'daily',
+      priority: 1,
       lastmod: new Date(),
     }),
   ],

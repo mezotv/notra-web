@@ -1,16 +1,4 @@
-# robots.txt for Notra
-# https://notra.io
-
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://notra.io/sitemap-index.xml
-
-# Crawl-delay (optional, some crawlers respect this)
-Crawl-delay: 1
-
-# Block common bot paths that aren't relevant
-Disallow: /api/
-Disallow: /_astro/
-Disallow: /*.json$
+Sitemap: https://usenotra.com/sitemap-index.xml
