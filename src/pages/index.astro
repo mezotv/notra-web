@@ -2,6 +2,11 @@
 import "../styles/global.css";
 import { Content } from "../content/notra.mdx";
 import FaviconLink from "../components/FaviconLink.astro";
+
+const title = "Notra - Turn your work into content.";
+const description =
+	"Notra uses data you're already generating (merged GitHub PRs, completed Linear issue or Slack chats) to turn your work into content.";
+const canonicalURL = Astro.url.href;
 ---
 
 <html lang="en">
@@ -10,7 +15,27 @@ import FaviconLink from "../components/FaviconLink.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Notra</title>
+
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={canonicalURL} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:site_name" content="Notra" />
+		<meta property="og:locale" content="en_US" />
+
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<meta name="theme-color" content="#8b5cf6" />
 	</head>
 	<body class="bg-white dark:bg-zinc-900">
 		<main
