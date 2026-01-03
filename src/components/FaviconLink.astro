@@ -16,7 +16,7 @@ const isInvertedFavicon = invertedFavicons.includes(hostname);
 ---
 
 {isExternalLink ? (
-  <a href={href} {...rest} class="favicon-link">
+  <a href={href} {...rest} target="_blank" rel="noopener noreferrer" class="favicon-link">
     <img
       src={faviconUrl}
       alt=""
@@ -28,7 +28,7 @@ const isInvertedFavicon = invertedFavicons.includes(hostname);
     <slot />
   </a>
 ) : (
-  <a href={href} {...rest}>
+  <a href={href} {...rest} target="_blank" rel="noopener noreferrer">
     <slot />
   </a>
 )}
