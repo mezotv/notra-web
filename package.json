@@ -11,9 +11,14 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/vercel": "^9.0.2",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
+    "@upstash/ratelimit": "^2.0.7",
+    "@upstash/redis": "^1.36.0",
     "astro": "^5.16.6",
-    "tailwindcss": "4"
+    "resend": "^6.6.0",
+    "tailwindcss": "4",
+    "zod": "^4.3.5"
   }
 }
